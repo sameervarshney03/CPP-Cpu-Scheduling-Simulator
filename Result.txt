@@ -1,0 +1,986 @@
+CPU Utilization: 94.24%
+
+--- Per-Process Metrics ---
+Process   AT    CT    TAT   RT    WT
+EDITOR    0     50    50    0     18
+BROWSER   2     67    65    3     38
+COMPILER  4     86    82    20    42
+MUSICAPP  7     69    62    9     35
+TERMINAL  9     58    49    4     21
+GAME      12    139   127   76    38
+DISCORD   15    88    73    43    11
+
+Average Waiting Time: 29.00
+Average Turnaround Time: 72.57
+Average Response Time: 22.14
+
+--- Gantt Chart ---
+0--EDITOR(PID:101)--5--BROWSER(PID:102)--13--TERMINAL(PID:105)--16--MUSICAPP(PID:104)--20--EDITOR(PID:101)--24--COMPILER(PID:103)--44--TERMINAL(PID:105)--47--EDITOR(PID:101)--50--MUSICAPP(PID:104)--55--TERMINAL(PID:105)--58--DISCORD(PID:107)--60--BROWSER(PID:102)--67--MUSICAPP(PID:104)--69--DISCORD(PID:107)--71--COMPILER(PID:103)--86--DISCORD(PID:107)--88--GAME(PID:106)--113--IDLE--121--GAME(PID:106)--139
+
+Total CPU Time: 131
+Total Input Time: 48
+Total Output Time: 29
+Processes Left in Entry Queue: 0
+Processes Left in Ready Queue: 0
+Processes Left in Input Queue: 0
+Processes Left in Output Queue: 0
+===============================================
+Time 0: EDITOR moved to Ready
+
+--- Time 0 ---
+Active: 101
+IActive: None
+OActive: None
+Entry Queue: 102 103 104 105 106 107
+Ready Queue: [Empty]
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 2: BROWSER moved to Ready
+Time 4: COMPILER moved to Ready
+Time 7: MUSICAPP moved to Ready
+Time 9: TERMINAL moved to Ready
+
+--- Time 25 ---
+Active: 103
+IActive: None
+OActive: None
+Entry Queue: 106 107
+Ready Queue: 104 105 101 102
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 51: BROWSER terminated
+  - Process ID: 102
+  - CPU Bursts: 2
+  - Input Bursts: 1
+  - Output Bursts: 0
+  - Time in CPU: 15
+  - Time in Input: 12
+  - Time in Output: 0
+  - Time Waiting: 22
+
+
+--- Time 50 ---
+Active: None
+IActive: None
+OActive: 101
+Entry Queue: 106 107
+Ready Queue: 103 105 104
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 51: GAME moved to Ready
+Time 66: COMPILER terminated
+  - Process ID: 103
+  - CPU Bursts: 2
+  - Input Bursts: 0
+  - Output Bursts: 1
+  - Time in CPU: 35
+  - Time in Input: 0
+  - Time in Output: 5
+  - Time Waiting: 22
+
+Time 66: DISCORD moved to Ready
+
+--- Time 75 ---
+Active: 106
+IActive: 104
+OActive: None
+Entry Queue: Empty
+Ready Queue: 101 107 105
+Input Queue: [Empty]
+Output Queue: [Empty]
+
+--- Time 100 ---
+Active: 101
+IActive: None
+OActive: 106
+Entry Queue: Empty
+Ready Queue: 107 105 104
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 102: EDITOR terminated
+  - Process ID: 101
+  - CPU Bursts: 3
+  - Input Bursts: 1
+  - Output Bursts: 1
+  - Time in CPU: 12
+  - Time in Input: 8
+  - Time in Output: 6
+  - Time Waiting: 72
+
+Time 107: TERMINAL terminated
+  - Process ID: 105
+  - CPU Bursts: 3
+  - Input Bursts: 2
+  - Output Bursts: 0
+  - Time in CPU: 9
+  - Time in Input: 10
+  - Time in Output: 0
+  - Time Waiting: 79
+
+Time 109: MUSICAPP terminated
+  - Process ID: 104
+  - CPU Bursts: 3
+  - Input Bursts: 1
+  - Output Bursts: 1
+  - Time in CPU: 11
+  - Time in Input: 6
+  - Time in Output: 10
+  - Time Waiting: 74
+
+
+--- Time 125 ---
+Active: 106
+IActive: None
+OActive: None
+Entry Queue: Empty
+Ready Queue: 107
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 127: GAME terminated
+  - Process ID: 106
+  - CPU Bursts: 2
+  - Input Bursts: 0
+  - Output Bursts: 1
+  - Time in CPU: 43
+  - Time in Input: 0
+  - Time in Output: 8
+  - Time Waiting: 25
+
+Time 137: DISCORD terminated
+  - Process ID: 107
+  - CPU Bursts: 3
+  - Input Bursts: 2
+  - Output Bursts: 0
+  - Time in CPU: 6
+  - Time in Input: 12
+  - Time in Output: 0
+  - Time Waiting: 53
+
+
+========== Final Simulation Summary ==========
+Algorithm: Priority (Non-Preemptive)
+Final Timer: 137
+Processes Terminated: 7
+CPU Idle Time: 6
+CPU Utilization: 95.62%
+
+--- Per-Process Metrics ---
+Process   AT    CT    TAT   RT    WT    
+EDITOR    0     102   102   0     72
+BROWSER   2     51    49    3     22
+COMPILER  4     66    62    9     22
+MUSICAPP  7     109   102   26    74
+TERMINAL  9     107   98    28    79
+GAME      12    127   115   62    25
+DISCORD   15    137   122   87    53    
+
+Average Waiting Time: 49.57
+Average Turnaround Time: 92.86
+Average Response Time: 30.71
+
+--- Gantt Chart ---
+0--EDITOR(PID:101)--5--BROWSER(PID:102)--13--COMPILER(PID:103)--33--MUSICAPP(PID:104)--37--TERMINAL(PID:105)--40--EDITOR(PID:101)--44--BROWSER(PID:102)--51--COMPILER(PID:103)--66--TERMINAL(PID:105)--69--MUSICAPP(PID:104)--74--GAME(PID:106)--99--EDITOR(PID:101)--102--DISCORD(PID:107)--104--TERMINAL(PID:105)--107--MUSICAPP(PID:104)--109--GAME(PID:106)--127--DISCORD(PID:107)--129--IDLE--135--DISCORD(PID:107)--137
+
+Total CPU Time: 131
+Total Input Time: 48
+Total Output Time: 29
+Processes Left in Entry Queue: 0
+Processes Left in Ready Queue: 0
+Processes Left in Input Queue: 0
+Processes Left in Output Queue: 0
+===============================================
+
+=== COMPARISON MODE ===
+Time 0: EDITOR moved to Ready
+
+--- Time 0 ---
+Active: 101
+IActive: None
+OActive: None
+Entry Queue: 102 103 104 105 106 107
+Ready Queue: [Empty]
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 2: BROWSER moved to Ready
+Time 4: COMPILER moved to Ready
+Time 7: MUSICAPP moved to Ready
+Time 9: TERMINAL moved to Ready
+
+--- Time 25 ---
+Active: 101
+IActive: 105
+OActive: 104
+Entry Queue: 106 107
+Ready Queue: 103
+Input Queue: 102
+Output Queue: [Empty]
+Time 50: EDITOR terminated
+  - Process ID: 101
+  - CPU Bursts: 3
+  - Input Bursts: 1
+  - Output Bursts: 1
+  - Time in CPU: 12
+  - Time in Input: 8
+  - Time in Output: 6
+  - Time Waiting: 24
+
+Time 50: GAME moved to Ready
+
+--- Time 50 ---
+Active: 102
+IActive: None
+OActive: None
+Entry Queue: 107
+Ready Queue: 105 103 104 106
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 58: TERMINAL terminated
+  - Process ID: 105
+  - CPU Bursts: 3
+  - Input Bursts: 2
+  - Output Bursts: 0
+  - Time in CPU: 9
+  - Time in Input: 10
+  - Time in Output: 0
+  - Time Waiting: 28
+
+Time 58: DISCORD moved to Ready
+Time 65: MUSICAPP terminated
+  - Process ID: 104
+  - CPU Bursts: 3
+  - Input Bursts: 1
+  - Output Bursts: 1
+  - Time in CPU: 11
+  - Time in Input: 6
+  - Time in Output: 10
+  - Time Waiting: 29
+
+Time 72: BROWSER terminated
+  - Process ID: 102
+  - CPU Bursts: 2
+  - Input Bursts: 1
+  - Output Bursts: 0
+  - Time in CPU: 15
+  - Time in Input: 12
+  - Time in Output: 0
+  - Time Waiting: 41
+
+
+--- Time 75 ---
+Active: 103
+IActive: 107
+OActive: None
+Entry Queue: Empty
+Ready Queue: 106
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 101: COMPILER terminated
+  - Process ID: 103
+  - CPU Bursts: 2
+  - Input Bursts: 0
+  - Output Bursts: 1
+  - Time in CPU: 35
+  - Time in Input: 0
+  - Time in Output: 5
+  - Time Waiting: 57
+
+
+--- Time 100 ---
+Active: None
+IActive: None
+OActive: None
+Entry Queue: Empty
+Ready Queue: 106 107
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 108: DISCORD terminated
+  - Process ID: 107
+  - CPU Bursts: 3
+  - Input Bursts: 2
+  - Output Bursts: 0
+  - Time in CPU: 6
+  - Time in Input: 12
+  - Time in Output: 0
+  - Time Waiting: 32
+
+
+--- Time 125 ---
+Active: None
+IActive: None
+OActive: None
+Entry Queue: Empty
+Ready Queue: 106
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 139: GAME terminated
+  - Process ID: 106
+  - CPU Bursts: 2
+  - Input Bursts: 0
+  - Output Bursts: 1
+  - Time in CPU: 43
+  - Time in Input: 0
+  - Time in Output: 8
+  - Time Waiting: 38
+
+
+========== Final Simulation Summary ==========
+Algorithm: Round Robin (Q=5)
+Final Timer: 139
+Processes Terminated: 7
+CPU Idle Time: 8
+CPU Utilization: 94.24%
+
+--- Per-Process Metrics ---
+Process   AT    CT    TAT   RT    WT
+EDITOR    0     50    50    0     24
+BROWSER   2     72    70    3     41
+COMPILER  4     101   97    6     57
+MUSICAPP  7     65    58    8     29
+TERMINAL  9     58    49    10    28
+GAME      12    139   127   53    38
+DISCORD   15    108   93    57    32
+
+Average Waiting Time: 35.57
+Average Turnaround Time: 77.71
+Average Response Time: 19.57
+
+--- Gantt Chart ---
+0--EDITOR(PID:101)--5--BROWSER(PID:102)--10--COMPILER(PID:103)--15--MUSICAPP(PID:104)--19--TERMINAL(PID:105)--22--BROWSER(PID:102)--25--EDITOR(PID:101)--29--COMPILER(PID:103)--34--TERMINAL(PID:105)--37--MUSICAPP(PID:104)--42--COMPILER(PID:103)--47--EDITOR(PID:101)--50--BROWSER(PID:102)--55--TERMINAL(PID:105)--58--COMPILER(PID:103)--63--MUSICAPP(PID:104)--65--GAME(PID:106)--70--BROWSER(PID:102)--72--DISCORD(PID:107)--74--COMPILER(PID:103)--79--GAME(PID:106)--84--COMPILER(PID:103)--89--DISCORD(PID:107)--91--GAME(PID:106)--96--COMPILER(PID:103)--101--GAME(PID:106)--106--DISCORD(PID:107)--108--GAME(PID:106)--113--IDLE--121--GAME(PID:106)--139
+
+Total CPU Time: 131
+Total Input Time: 48
+Total Output Time: 29
+Processes Left in Entry Queue: 0
+Processes Left in Ready Queue: 0
+Processes Left in Input Queue: 0
+Processes Left in Output Queue: 0
+===============================================
+Time 0: EDITOR moved to Ready
+
+--- Time 0 ---
+Active: 101
+IActive: None
+OActive: None
+Entry Queue: 102 103 104 105 106 107
+Ready Queue: [Empty]
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 2: BROWSER moved to Ready
+Time 4: COMPILER moved to Ready
+Time 7: MUSICAPP moved to Ready
+Time 9: TERMINAL moved to Ready
+
+--- Time 25 ---
+Active: 103
+IActive: 105
+OActive: 104
+Entry Queue: 106 107
+Ready Queue: 102
+Input Queue: [Empty]
+Output Queue: 101
+Time 50: EDITOR terminated
+  - Process ID: 101
+  - CPU Bursts: 3
+  - Input Bursts: 1
+  - Output Bursts: 1
+  - Time in CPU: 12
+  - Time in Input: 8
+  - Time in Output: 6
+  - Time Waiting: 18
+
+Time 50: GAME moved to Ready
+
+--- Time 50 ---
+Active: 104
+IActive: 105
+OActive: None
+Entry Queue: 107
+Ready Queue: 102 103 106
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 58: TERMINAL terminated
+  - Process ID: 105
+  - CPU Bursts: 3
+  - Input Bursts: 2
+  - Output Bursts: 0
+  - Time in CPU: 9
+  - Time in Input: 10
+  - Time in Output: 0
+  - Time Waiting: 21
+
+Time 58: DISCORD moved to Ready
+Time 67: BROWSER terminated
+  - Process ID: 102
+  - CPU Bursts: 2
+  - Input Bursts: 1
+  - Output Bursts: 0
+  - Time in CPU: 15
+  - Time in Input: 12
+  - Time in Output: 0
+  - Time Waiting: 38
+
+Time 69: MUSICAPP terminated
+  - Process ID: 104
+  - CPU Bursts: 3
+  - Input Bursts: 1
+  - Output Bursts: 1
+  - Time in CPU: 11
+  - Time in Input: 6
+  - Time in Output: 10
+  - Time Waiting: 35
+
+
+--- Time 75 ---
+Active: 103
+IActive: 107
+OActive: None
+Entry Queue: Empty
+Ready Queue: 106
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 86: COMPILER terminated
+  - Process ID: 103
+  - CPU Bursts: 2
+  - Input Bursts: 0
+  - Output Bursts: 1
+  - Time in CPU: 35
+  - Time in Input: 0
+  - Time in Output: 5
+  - Time Waiting: 42
+
+Time 88: DISCORD terminated
+  - Process ID: 107
+  - CPU Bursts: 3
+  - Input Bursts: 2
+  - Output Bursts: 0
+  - Time in CPU: 6
+  - Time in Input: 12
+  - Time in Output: 0
+  - Time Waiting: 11
+
+
+--- Time 100 ---
+Active: 106
+IActive: None
+OActive: None
+Entry Queue: Empty
+Ready Queue: [Empty]
+Input Queue: [Empty]
+Output Queue: [Empty]
+
+--- Time 125 ---
+Active: 106
+IActive: None
+OActive: None
+Entry Queue: Empty
+Ready Queue: [Empty]
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 139: GAME terminated
+  - Process ID: 106
+  - CPU Bursts: 2
+  - Input Bursts: 0
+  - Output Bursts: 1
+  - Time in CPU: 43
+  - Time in Input: 0
+  - Time in Output: 8
+  - Time Waiting: 38
+
+
+========== Final Simulation Summary ==========
+Algorithm: Shortest Job First (Non-Preemptive)
+Final Timer: 139
+Processes Terminated: 7
+CPU Idle Time: 8
+CPU Utilization: 94.24%
+
+--- Per-Process Metrics ---
+Process   AT    CT    TAT   RT    WT
+EDITOR    0     50    50    0     18
+BROWSER   2     67    65    3     38
+COMPILER  4     86    82    20    42
+MUSICAPP  7     69    62    9     35
+TERMINAL  9     58    49    4     21
+GAME      12    139   127   76    38
+DISCORD   15    88    73    43    11
+
+Average Waiting Time: 29.00
+Average Turnaround Time: 72.57
+Average Response Time: 22.14
+
+--- Gantt Chart ---
+0--EDITOR(PID:101)--5--BROWSER(PID:102)--13--TERMINAL(PID:105)--16--MUSICAPP(PID:104)--20--EDITOR(PID:101)--24--COMPILER(PID:103)--44--TERMINAL(PID:105)--47--EDITOR(PID:101)--50--MUSICAPP(PID:104)--55--TERMINAL(PID:105)--58--DISCORD(PID:107)--60--BROWSER(PID:102)--67--MUSICAPP(PID:104)--69--DISCORD(PID:107)--71--COMPILER(PID:103)--86--DISCORD(PID:107)--88--GAME(PID:106)--113--IDLE--121--GAME(PID:106)--139
+
+Total CPU Time: 131
+Total Input Time: 48
+Total Output Time: 29
+Processes Left in Entry Queue: 0
+Processes Left in Ready Queue: 0
+Processes Left in Input Queue: 0
+Processes Left in Output Queue: 0
+===============================================
+Time 0: EDITOR moved to Ready
+
+--- Time 0 ---
+Active: 101
+IActive: None
+OActive: None
+Entry Queue: 102 103 104 105 106 107
+Ready Queue: [Empty]
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 2: BROWSER moved to Ready
+Time 4: COMPILER moved to Ready
+Time 7: MUSICAPP moved to Ready
+Time 9: TERMINAL moved to Ready
+
+--- Time 25 ---
+Active: 103
+IActive: None
+OActive: None
+Entry Queue: 106 107
+Ready Queue: 104 105 101 102
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 51: BROWSER terminated
+  - Process ID: 102
+  - CPU Bursts: 2
+  - Input Bursts: 1
+  - Output Bursts: 0
+  - Time in CPU: 15
+  - Time in Input: 12
+  - Time in Output: 0
+  - Time Waiting: 22
+
+
+--- Time 50 ---
+Active: None
+IActive: None
+OActive: 101
+Entry Queue: 106 107
+Ready Queue: 103 105 104
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 51: GAME moved to Ready
+Time 66: COMPILER terminated
+  - Process ID: 103
+  - CPU Bursts: 2
+  - Input Bursts: 0
+  - Output Bursts: 1
+  - Time in CPU: 35
+  - Time in Input: 0
+  - Time in Output: 5
+  - Time Waiting: 22
+
+Time 66: DISCORD moved to Ready
+
+--- Time 75 ---
+Active: 106
+IActive: 104
+OActive: None
+Entry Queue: Empty
+Ready Queue: 101 107 105
+Input Queue: [Empty]
+Output Queue: [Empty]
+
+--- Time 100 ---
+Active: 101
+IActive: None
+OActive: 106
+Entry Queue: Empty
+Ready Queue: 107 105 104
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 102: EDITOR terminated
+  - Process ID: 101
+  - CPU Bursts: 3
+  - Input Bursts: 1
+  - Output Bursts: 1
+  - Time in CPU: 12
+  - Time in Input: 8
+  - Time in Output: 6
+  - Time Waiting: 72
+
+Time 107: TERMINAL terminated
+  - Process ID: 105
+  - CPU Bursts: 3
+  - Input Bursts: 2
+  - Output Bursts: 0
+  - Time in CPU: 9
+  - Time in Input: 10
+  - Time in Output: 0
+  - Time Waiting: 79
+
+Time 109: MUSICAPP terminated
+  - Process ID: 104
+  - CPU Bursts: 3
+  - Input Bursts: 1
+  - Output Bursts: 1
+  - Time in CPU: 11
+  - Time in Input: 6
+  - Time in Output: 10
+  - Time Waiting: 74
+
+
+--- Time 125 ---
+Active: 106
+IActive: None
+OActive: None
+Entry Queue: Empty
+Ready Queue: 107
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 127: GAME terminated
+  - Process ID: 106
+  - CPU Bursts: 2
+  - Input Bursts: 0
+  - Output Bursts: 1
+  - Time in CPU: 43
+  - Time in Input: 0
+  - Time in Output: 8
+  - Time Waiting: 25
+
+Time 137: DISCORD terminated
+  - Process ID: 107
+  - CPU Bursts: 3
+  - Input Bursts: 2
+  - Output Bursts: 0
+  - Time in CPU: 6
+  - Time in Input: 12
+  - Time in Output: 0
+  - Time Waiting: 53
+
+
+========== Final Simulation Summary ==========
+Algorithm: Priority (Non-Preemptive)
+Final Timer: 137
+Processes Terminated: 7
+CPU Idle Time: 6
+CPU Utilization: 95.62%
+
+--- Per-Process Metrics ---
+Process   AT    CT    TAT   RT    WT
+EDITOR    0     102   102   0     72
+BROWSER   2     51    49    3     22
+COMPILER  4     66    62    9     22
+MUSICAPP  7     109   102   26    74
+TERMINAL  9     107   98    28    79
+GAME      12    127   115   62    25
+DISCORD   15    137   122   87    53
+
+Average Waiting Time: 49.57
+Average Turnaround Time: 92.86
+Average Response Time: 30.71
+
+--- Gantt Chart ---
+0--EDITOR(PID:101)--5--BROWSER(PID:102)--13--COMPILER(PID:103)--33--MUSICAPP(PID:104)--37--TERMINAL(PID:105)--40--EDITOR(PID:101)--44--BROWSER(PID:102)--51--COMPILER(PID:103)--66--TERMINAL(PID:105)--69--MUSICAPP(PID:104)--74--GAME(PID:106)--99--EDITOR(PID:101)--102--DISCORD(PID:107)--104--TERMINAL(PID:105)--107--MUSICAPP(PID:104)--109--GAME(PID:106)--127--DISCORD(PID:107)--129--IDLE--135--DISCORD(PID:107)--137
+
+Total CPU Time: 131
+Total Input Time: 48
+Total Output Time: 29
+Processes Left in Entry Queue: 0
+Processes Left in Ready Queue: 0
+Processes Left in Input Queue: 0
+Processes Left in Output Queue: 0
+===============================================
+Time 0: PROC1 moved to Ready
+
+--- Time 0 ---
+Active: 101
+IActive: None
+OActive: None
+Entry Queue: 102 103 104 105 106 107 108 109 110 111 112 113 114 115
+Ready Queue: [Empty]
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 1: PROC2 moved to Ready
+Time 2: PROC3 moved to Ready
+Time 3: PROC4 moved to Ready
+Time 5: PROC5 moved to Ready
+
+--- Time 25 ---
+Active: 101
+IActive: 105
+OActive: 102
+Entry Queue: 106 107 108 109 110 111 112 113 114 115
+Ready Queue: 104 103
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 51: PROC1 terminated
+  - Process ID: 101
+  - CPU Bursts: 3
+  - Input Bursts: 1
+  - Output Bursts: 1
+  - Time in CPU: 12
+  - Time in Input: 8
+  - Time in Output: 5
+  - Time Waiting: 26
+
+
+--- Time 50 ---
+Active: None
+IActive: None
+OActive: 104
+Entry Queue: 106 107 108 109 110 111 112 113 114 115
+Ready Queue: 103 102 105
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 51: PROC6 moved to Ready
+Time 52: PROC3 terminated
+  - Process ID: 103
+  - CPU Bursts: 3
+  - Input Bursts: 2
+  - Output Bursts: 0
+  - Time in CPU: 6
+  - Time in Input: 11
+  - Time in Output: 0
+  - Time Waiting: 33
+
+Time 52: PROC7 moved to Ready
+Time 55: PROC2 terminated
+  - Process ID: 102
+  - CPU Bursts: 2
+  - Input Bursts: 0
+  - Output Bursts: 1
+  - Time in CPU: 18
+  - Time in Input: 0
+  - Time in Output: 4
+  - Time Waiting: 32
+
+Time 55: PROC8 moved to Ready
+Time 57: PROC5 terminated
+  - Process ID: 105
+  - CPU Bursts: 3
+  - Input Bursts: 1
+  - Output Bursts: 1
+  - Time in CPU: 6
+  - Time in Input: 9
+  - Time in Output: 9
+  - Time Waiting: 28
+
+Time 57: PROC9 moved to Ready
+
+--- Time 75 ---
+Active: None
+IActive: None
+OActive: None
+Entry Queue: 110 111 112 113 114 115
+Ready Queue: 109 106 107 104
+Input Queue: [Empty]
+Output Queue: 108
+Time 92: PROC4 terminated
+  - Process ID: 104
+  - CPU Bursts: 2
+  - Input Bursts: 0
+  - Output Bursts: 1
+  - Time in CPU: 25
+  - Time in Input: 0
+  - Time in Output: 6
+  - Time Waiting: 58
+
+Time 92: PROC10 moved to Ready
+
+--- Time 100 ---
+Active: None
+IActive: None
+OActive: None
+Entry Queue: 111 112 113 114 115
+Ready Queue: 106 110 107 109
+Input Queue: 108
+Output Queue: [Empty]
+Time 107: PROC10 terminated
+  - Process ID: 110
+  - CPU Bursts: 1
+  - Input Bursts: 0
+  - Output Bursts: 0
+  - Time in CPU: 1
+  - Time in Input: 0
+  - Time in Output: 0
+  - Time Waiting: 14
+
+Time 107: PROC11 moved to Ready
+Time 112: PROC7 terminated
+  - Process ID: 107
+  - CPU Bursts: 2
+  - Input Bursts: 1
+  - Output Bursts: 0
+  - Time in CPU: 11
+  - Time in Input: 7
+  - Time in Output: 0
+  - Time Waiting: 42
+
+Time 112: PROC12 moved to Ready
+Time 123: PROC8 terminated
+  - Process ID: 108
+  - CPU Bursts: 3
+  - Input Bursts: 1
+  - Output Bursts: 1
+  - Time in CPU: 12
+  - Time in Input: 5
+  - Time in Output: 5
+  - Time Waiting: 46
+
+Time 123: PROC13 moved to Ready
+Time 125: PROC11 terminated
+  - Process ID: 111
+  - CPU Bursts: 1
+  - Input Bursts: 0
+  - Output Bursts: 0
+  - Time in CPU: 2
+  - Time in Input: 0
+  - Time in Output: 0
+  - Time Waiting: 16
+
+Time 125: PROC14 moved to Ready
+
+--- Time 125 ---
+Active: 112
+IActive: None
+OActive: 106
+Entry Queue: 115
+Ready Queue: 113 109 114
+Input Queue: [Empty]
+Output Queue: [Empty]
+
+--- Time 150 ---
+Active: 112
+IActive: None
+OActive: None
+Entry Queue: 115
+Ready Queue: 109 113 114 106
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 156: PROC9 terminated
+  - Process ID: 109
+  - CPU Bursts: 2
+  - Input Bursts: 1
+  - Output Bursts: 0
+  - Time in CPU: 20
+  - Time in Input: 10
+  - Time in Output: 0
+  - Time Waiting: 69
+
+Time 156: PROC15 moved to Ready
+
+--- Time 175 ---
+Active: 115
+IActive: None
+OActive: None
+Entry Queue: Empty
+Ready Queue: 113 114 106 112
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 184: PROC13 terminated
+  - Process ID: 113
+  - CPU Bursts: 3
+  - Input Bursts: 1
+  - Output Bursts: 1
+  - Time in CPU: 15
+  - Time in Input: 6
+  - Time in Output: 6
+  - Time Waiting: 34
+
+Time 187: PROC14 terminated
+  - Process ID: 114
+  - CPU Bursts: 3
+  - Input Bursts: 2
+  - Output Bursts: 0
+  - Time in CPU: 9
+  - Time in Input: 8
+  - Time in Output: 0
+  - Time Waiting: 45
+
+Time 189: PROC6 terminated
+  - Process ID: 106
+  - CPU Bursts: 2
+  - Input Bursts: 0
+  - Output Bursts: 1
+  - Time in CPU: 32
+  - Time in Input: 0
+  - Time in Output: 8
+  - Time Waiting: 98
+
+
+--- Time 200 ---
+Active: 115
+IActive: None
+OActive: None
+Entry Queue: Empty
+Ready Queue: 112
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 226: PROC12 terminated
+  - Process ID: 112
+  - CPU Bursts: 2
+  - Input Bursts: 0
+  - Output Bursts: 1
+  - Time in CPU: 32
+  - Time in Input: 0
+  - Time in Output: 7
+  - Time Waiting: 75
+
+
+--- Time 225 ---
+Active: None
+IActive: None
+OActive: 115
+Entry Queue: Empty
+Ready Queue: [Empty]
+Input Queue: [Empty]
+Output Queue: [Empty]
+
+--- Time 250 ---
+Active: 115
+IActive: None
+OActive: None
+Entry Queue: Empty
+Ready Queue: [Empty]
+Input Queue: [Empty]
+Output Queue: [Empty]
+Time 252: PROC15 terminated
+  - Process ID: 115
+  - CPU Bursts: 2
+  - Input Bursts: 0
+  - Output Bursts: 1
+  - Time in CPU: 45
+  - Time in Input: 0
+  - Time in Output: 10
+  - Time Waiting: 41
+
+
+========== Final Simulation Summary ==========
+Algorithm: Round Robin (Q=5)
+Final Timer: 252
+Processes Terminated: 15
+CPU Idle Time: 6
+CPU Utilization: 97.62%
+
+--- Per-Process Metrics ---
+Process   AT    CT    TAT   RT    WT
+PROC1     0     51    51    0     26
+PROC2     1     55    54    4     32
+PROC3     2     52    50    8     33
+PROC4     3     92    89    10    58
+PROC5     5     57    52    13    28
+PROC6     7     189   182   50    98
+PROC7     9     112   103   53    42
+PROC8     10    123   113   62    46
+PROC9     12    156   144   64    69    
+PROC10    14    107   93    92    14
+PROC11    15    125   110   108   16
+PROC12    16    226   210   109   75
+PROC13    18    184   166   112   34
+PROC14    20    187   167   120   45
+PROC15    22    252   230   152   41
+
+--- Gantt Chart ---
+0--PROC1(PID:101)--5--PROC2(PID:102)--10--PROC3(PID:103)--13--PROC4(PID:104)--18--PROC5(PID:105)--20--PROC2(PID:102)--25--PROC1(PID:101)--29--PROC4(PID:104)--34--PROC3(PID:103)--36--PROC5(PID:105)--38--PROC2(PID:102)--43--PROC4(PID:104)--48--PROC1(PID:101)--51--PROC3(PID:103)--52--PROC2(PID:102)--55--PROC5(PID:105)--57--PROC6(PID:106)--62--PROC7(PID:107)--67--PROC4(PID:104)--72--PROC8(PID:108)--76--PROC9(PID:109)--81--PROC6(PID:106)--86--PROC7(PID:107)--87--PROC4(PID:104)--92--PROC9(PID:109)--97--PROC8(PID:108)--101--PROC6(PID:106)--106--PROC10(PID:110)--107--PROC7(PID:107)--112--PROC9(PID:109)--114--PROC6(PID:106)--119--PROC8(PID:108)--123--PROC11(PID:111)--125--PROC12(PID:112)--130--PROC13(PID:113)--135--PROC9(PID:109)--140--PROC14(PID:114)--143--PROC6(PID:106)--148--PROC12(PID:112)--153--PROC9(PID:109)--156--PROC13(PID:113)--161--PROC14(PID:114)--164--PROC6(PID:106)--169--PROC12(PID:112)--174--PROC15(PID:115)--179--PROC13(PID:113)--184--PROC14(PID:114)--187--PROC6(PID:106)--189--PROC12(PID:112)--192--PROC15(PID:115)--202--PROC12(PID:112)--207--PROC15(PID:115)--212--PROC12(PID:112)--217--PROC15(PID:115)--222--PROC12(PID:112)--226--IDLE--232--PROC15(PID:115)--252
+
+Total CPU Time: 246
+Total Input Time: 64
+Total Output Time: 60
+Processes Left in Entry Queue: 0
+Processes Left in Ready Queue: 0
+Processes Left in Input Queue: 0
+Processes Left in Output Queue: 0
+===============================================
