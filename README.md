@@ -114,6 +114,3 @@ Processes Left in Output Queue: 0
 - **Fixed System Constraints:** The simulation terminates at a hardcoded `MAX_TIME = 500` ticks, and limits concurrent active processes to `IN_USE = 5`.
 - **No Multithreading:** The simulator runs in a single-threaded loop to model OS scheduling theoretically; it does not perform actual OS thread context switching.
 - **Priority Starvation:** As Priority Scheduling is strictly non-preemptive without an "aging" mechanism, low-priority processes can theoretically starve if blocked by an infinite stream of high-priority arrivals.
-
-## Attribution and License
-This project builds upon the CPU Scheduling Simulator originally authored by Cyrus Johnson. Enhancements include SJF, Priority Scheduling, Comparison Mode, robust Gantt Chart rendering, standardized scheduling metric formulas, memory cleanup, timeline fixes, input parsing validation, and cross-platform CMake/Make compatibility. Please respect the original repository licensing and attribution before public redistribution.
