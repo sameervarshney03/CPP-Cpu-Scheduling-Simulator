@@ -1,0 +1,4 @@
+P1 0 C 5 N 0
+P2 0 C 3 N 0
+P3 0 C 1 N 0
+STOPHERE

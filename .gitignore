@@ -1,0 +1,19 @@
+# Compiled executables
+*.exe
+simulator
+
+# Object files
+*.o
+
+# Editor and OS artifacts
+.vscode/
+.vs/
+.idea/
+.DS_Store
+*.swp
+*~
+Thumbs.db
+
+# Generated logs and temporary files
+*.log
+result.txt

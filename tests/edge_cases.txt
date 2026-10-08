@@ -1,0 +1,12 @@
+P_Invalid 0 C 5 I 3 C 2 I
+P_Neg -2 C 2 N 0
+P_PrioBad 0 2x C 3 N 0
+P_Dup 0 C 2 N 0
+P_Dup 1 C 2 N 0
+P_C_C 0 C 3 C 2 N 0
+P_I_I 0 C 1 I 2 I 1 C 2 N 0
+P_O_O 0 C 1 O 2 O 1 C 2 N 0
+P_I_O 0 C 1 I 2 O 1 C 2 N 0
+P_Start_I 0 I 2 C 2 N 0
+P_Trail 0 C 2 N 0 trail
+STOPHERE
